@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            min-height: 100vh;
+            padding: 20px;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5ee7df, #b490ca);
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .user-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .recipes-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .recipes-header h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+        }
+
+        .recipe-count {
+            background: linear-gradient(135deg, #5ee7df, #b490ca);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .recipe-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .recipe-item {
+            background: white;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid #5ee7df;
+        }
+
+        .recipe-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .recipe-link:hover {
+            color: #5ee7df;
+        }
+
+        .search-form {
+            margin: 0 0 25px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-form input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #eee;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search-form input:focus {
+            border-color: #5ee7df;
+            box-shadow: 0 0 10px rgba(94, 231, 223, 0.2);
+        }
+
+        .search-form button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #5ee7df, #b490ca);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(94, 231, 223, 0.3);
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-create {
+            background: linear-gradient(135deg, #5ee7df, #b490ca);
+            color: white;
+            box-shadow: 0 4px 15px rgba(94, 231, 223, 0.3);
+        }
+
+        .btn-logout {
+            background: white;
+            color: #2c3e50;
+            border: 2px solid #eee;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .search-form {
+                flex-direction: column;
+            }
+
+            .search-form button {
+                width: 100%;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .recipe-item {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .recipe-item:nth-child(1) { animation-delay: 0.1s; }
+        .recipe-item:nth-child(2) { animation-delay: 0.2s; }
+        .recipe-item:nth-child(3) { animation-delay: 0.3s; }
+        .recipe-item:nth-child(4) { animation-delay: 0.4s; }
+        .recipe-item:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome, <%= user.name %></h1>
+            <div class="user-info">
+                Logged in through <b><%= user.type %></b> | User ID: <%= user.id %>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="search-form">
+                <form action="/search" method="GET">
+                    <input type="text" name="recipeid" placeholder="Search by Recipe ID..." required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <div class="recipes-header">
+                <h2>Your Recipes</h2>
+                <span class="recipe-count"><%= nrecipes %> Recipes</span>
+            </div>
+
+            <ul class="recipe-list">
+                <% for (var r of recipes) { %>
+                <li class="recipe-item">
+                    <a href="/details?_id=<%= r._id %>" class="recipe-link">
+                        Recipe ID: <%= r.recipeid %>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+
+            <div class="action-buttons">
+                <a href="/create" class="btn btn-create">Create New Recipe</a>
+                <a href="/logout" class="btn btn-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
