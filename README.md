@@ -6,6 +6,7 @@ LI Wing On       StudentID:12886461
 CHENG Kwing To  StudentID:12889278
 KAM Sum Kai     StudentID:12886203
 YIP Tin Hang      StudentID:13258976
+
 Project File Introduction
 This project consists of the following key files and folders:
 server.js
@@ -15,6 +16,7 @@ Configuring Facebook OAuth authentication using Passport.js.
 Defining RESTful API routes for managing recipes (Create, Read, Update, Delete).
 Establishing a connection to the MongoDB database.
 Handling session management and form data processing.
+
 Functionalities:
 Facebook Authentication:
 Configured using passport-facebook strategy.
@@ -23,6 +25,7 @@ clientID: Your Facebook App Client ID.
 clientSecret: Your Facebook App Client Secret.
 callbackURL: The URL for Facebook to redirect after successful login.
 Moved sensitive data to environment variables (FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET, CALLBACK_URL).
+
 MongoDB Connection:
 Connects to MongoDB using the mongodb library.
 The mongourl variable holds the MongoDB connection string.
