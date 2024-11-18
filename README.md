@@ -68,7 +68,7 @@ edit.ejs: Provides a form for editing existing recipes.
 create.ejs: Provides a form for creating a new recipe.
 message.ejs: A generic template for displaying messages (e.g., success or error).
 
-Cloud URL : http://localhost:8099/
+Cloud URL : recipemanagement-12886461-eza4dkftb6fgd0dh.eastus-01.azurewebsites.net
 
 
 Operation guides
