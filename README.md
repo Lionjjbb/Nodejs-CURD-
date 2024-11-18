@@ -78,7 +78,7 @@ Valid Login Information:
 You must use a valid Facebook account to log in.
 The Facebook authentication credentials (clientID, clientSecret, and callbackURL) used for logging in have been updated in the server.js file.
 Sign-In Steps:
-Open the login page at: recipemanagement-12886461-eza4dkftb6fgd0dh.eastus-01.azurewebsites.net.
+Open the login page at: localhost:8099/login
 Click on the "Continue with Facebook" button.
 Log in using your Facebook account credentials.
 Upon successful authentication, you will be redirected to the Recipe List page (/list), displaying all available recipes.
