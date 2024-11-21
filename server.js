@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 const facebookAuth = {
       'clientID'        : '1544657552824528', 
       'clientSecret'    : 'd1b97cf09168eea03adc89ab0d9b11e6', 
-      'callbackURL'     : 'http://recipemanagement-12886461-eza4dkftb6fgd0dh.eastus-01.azurewebsites.net/auth/facebook/callback'
+      'callbackURL'     : 'http://localhost:8099/auth/facebook/callback'
 };
 
 // MongoDB database'message
