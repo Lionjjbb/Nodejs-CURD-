@@ -416,4 +416,4 @@ app.get('/*', (req,res) => {
 })
 
 const port = process.env.PORT || 8099;
-app.listen(port, () => {console.log(`Listening at http://localhost:${port}`);});
+app.listen(port, '0.0.0.0', () => {console.log(`Listening at http://localhost:${port}`);});
