@@ -12,9 +12,8 @@
         "passport-facebook": "*",
         "express-session": "*"
     },
-    "engine": "node >= 14.0.0",
+    "engine": "node >= 18.0.0",
     "scripts": {
         "start": "node server"
-
     }
 }
