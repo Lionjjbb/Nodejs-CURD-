@@ -10,10 +10,11 @@ var express             = require('express'),
 app.set('view engine', 'ejs');
 
 // FacebookAuth strategy
-//const facebookAuth = {
-//      'clientID'        : '1544657552824528', 
-//      'clientSecret'    : 'd1b97cf09168eea03adc89ab0d9b11e6', 
-//      'callbackURL'     : 'http://localhost:8099/auth/facebook/callback'};
+const facebookAuth = {
+      'clientID'        : '1544657552824528', 
+      'clientSecret'    : 'd1b97cf09168eea03adc89ab0d9b11e6', 
+      'callbackURL'     : 'http://localhost:8099/auth/facebook/callback'
+};
 
 // MongoDB database'message
 const mongourl = 'mongodb+srv://s1288646:Aa67093524@cluster0.zvhpq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
@@ -31,14 +32,9 @@ passport.deserializeUser(function (id, done) {
 
 // passport facebook strategy
 passport.use(new FacebookStrategy({
-    clientID: process.env.FACEBOOK_APP_ID,
-    clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: process.env.NODE_ENV === 'production'
-        ? 'https://nodejs-curd-group51.onrender.com/auth/facebook/callback'
-        : 'http://localhost:8099/auth/facebook/callback',
-//    "clientID"        : facebookAuth.clientID,
-//    "clientSecret"    : facebookAuth.clientSecret,
-//    "callbackURL"     : facebookAuth.callbackURL
+    "clientID"        : facebookAuth.clientID,
+    "clientSecret"    : facebookAuth.clientSecret,
+    "callbackURL"     : facebookAuth.callbackURL
   },  
   function (token, refreshToken, profile, done) {
     console.log("Facebook Profile: " + JSON.stringify(profile));
