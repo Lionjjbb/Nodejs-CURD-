@@ -415,5 +415,5 @@ app.get('/*', (req,res) => {
     res.status(404).render('message', {message: `${req.path} - Unknown request!` });
 })
 
-const port = process.env.PORT || 8099;
+const port = process.env.PORT || 10000;
 app.listen(port, '0.0.0.0', () => {console.log(`Listening at http://localhost:${port}`);});
