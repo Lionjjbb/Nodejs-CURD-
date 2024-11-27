@@ -138,7 +138,7 @@ Description: This creates a new recipe with the ID 12345.
 Read:curl -X GET http://localhost:8099/api/recipe/12345 
 Description: This retrieves the recipe with the ID 12345.
 
-Update:curl -X PUT http://localhost:8099/api/recipe/12345 \-F "title=Updated Salad Recipe" \-F "category=Healthy Salad" \-F "cuisine_type=Vegetarian" \-F "preparation_time=15 mins" \-F "ingredients=Lettuce, Tomatoes, Cucumbers, Olives" \-F "instructions=Chop ingredients, mix in a bowl, and add dressing" 
+Update:curl -X PUT http://localhost:8099/api/recipe/12345 \-F "title=Updated Salad Recipe" \-F "category=appetizer" \-F "cuisine_type=Vegetarian" \-F "preparation_time=15 mins" \-F "ingredients=Lettuce, Tomatoes, Cucumbers, Olives" \-F "instructions=Chop ingredients, mix in a bowl, and add dressing" 
 Description: This updates the recipe with the ID 12345.
 Delete:curl -X DELETE http://localhost:8099/api/recipe/12345 
 Description: This deletes the recipe with the ID 12345.
