@@ -132,6 +132,7 @@ RESTful CRUD Services:Create,Read,Update,Delete
 HTTP Request Types:POST,GET,PUT,DELETE
 The list of APIS: Create , Read, Update, Delete
 Path URI: /api/recipe/:recipeid
+Open window terminal and input below codes for restful testing
 Test using curl:
 Create: curl -X POST https://nodejs-curd-group51.onrender.com/api/recipe/12345 \-F "recipeid=12345" \-F "title=Simple Salad" \-F "category=Salad" \-F "cuisine_type=Vegetarian" \-F "preparation_time=10 mins" \-F "ingredients=Lettuce, Tomatoes, Cucumbers" \-F "instructions=Chop ingredients and mix in a bowl"
 Description: This creates a new recipe with the ID 12345.
