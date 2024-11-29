@@ -24,7 +24,7 @@ facebookAuth object contains:
 clientID: Your Facebook App Client ID.
 clientSecret: Your Facebook App Client Secret.
 callbackURL: The URL for Facebook to redirect after successful login.
-Moved sensitive data to environment variables (FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET, CALLBACK_URL).
+
 
 MongoDB Connection:
 Connects to MongoDB using the mongodb library.
