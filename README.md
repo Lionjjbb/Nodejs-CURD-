@@ -133,12 +133,12 @@ HTTP Request Types:POST,GET,PUT,DELETE
 The list of APIS: Create , Read, Update, Delete
 Path URI: /api/recipe/:recipeid
 Test using curl:
-Create: curl -X POST http://localhost:8099/api/recipe/12345 \-F "recipeid=12345" \-F "title=Simple Salad" \-F "category=Salad" \-F "cuisine_type=Vegetarian" \-F "preparation_time=10 mins" \-F "ingredients=Lettuce, Tomatoes, Cucumbers" \-F "instructions=Chop ingredients and mix in a bowl"
+Create: curl -X POST https://nodejs-curd-group51.onrender.com/api/recipe/12345 \-F "recipeid=12345" \-F "title=Simple Salad" \-F "category=Salad" \-F "cuisine_type=Vegetarian" \-F "preparation_time=10 mins" \-F "ingredients=Lettuce, Tomatoes, Cucumbers" \-F "instructions=Chop ingredients and mix in a bowl"
 Description: This creates a new recipe with the ID 12345.
-Read:curl -X GET http://localhost:8099/api/recipe/12345 
+Read:curl -X GET https://nodejs-curd-group51.onrender.com/api/recipe/12345 
 Description: This retrieves the recipe with the ID 12345.
 
-Update:curl -X PUT http://localhost:8099/api/recipe/12345 \-F "title=Updated Salad Recipe" \-F "category=appetizer" \-F "cuisine_type=Vegetarian" \-F "preparation_time=15 mins" \-F "ingredients=Lettuce, Tomatoes, Cucumbers, Olives" \-F "instructions=Chop ingredients, mix in a bowl, and add dressing" 
+Update:curl -X PUT https://nodejs-curd-group51.onrender.com/api/recipe/12345 \-F "title=Updated Salad Recipe" \-F "category=appetizer" \-F "cuisine_type=Vegetarian" \-F "preparation_time=15 mins" \-F "ingredients=Lettuce, Tomatoes, Cucumbers, Olives" \-F "instructions=Chop ingredients, mix in a bowl, and add dressing" 
 Description: This updates the recipe with the ID 12345.
-Delete:curl -X DELETE http://localhost:8099/api/recipe/12345 
+Delete:curl -X DELETE https://nodejs-curd-group51.onrender.com/api/recipe/12345 
 Description: This deletes the recipe with the ID 12345.
