@@ -144,5 +144,14 @@ Description: This updates the recipe with the ID 12345.
 Delete:curl -X DELETE https://nodejs-curd-group51.onrender.com/api/recipe/12345 
 Description: This deletes the recipe with the ID 12345.
 
+Login page:
 ![image](https://github.com/user-attachments/assets/3fbb358a-40bc-4cce-97d2-00fb838a5b93)
 
+List page:
+![image](https://github.com/user-attachments/assets/849d6c92-5dd1-470a-b351-13cd56a1ef0d)
+
+Detail page of recipe 1:
+![image](https://github.com/user-attachments/assets/f3f2d64d-170b-48b7-bded-491d31600e02)
+
+Upload recipe page:
+![image](https://github.com/user-attachments/assets/f89a8b9f-e5ae-4665-beef-c116aef29e06)
