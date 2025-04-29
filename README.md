@@ -143,3 +143,6 @@ Update:curl -X PUT https://nodejs-curd-group51.onrender.com/api/recipe/12345 \-F
 Description: This updates the recipe with the ID 12345.
 Delete:curl -X DELETE https://nodejs-curd-group51.onrender.com/api/recipe/12345 
 Description: This deletes the recipe with the ID 12345.
+
+![image](https://github.com/user-attachments/assets/3fbb358a-40bc-4cce-97d2-00fb838a5b93)
+
